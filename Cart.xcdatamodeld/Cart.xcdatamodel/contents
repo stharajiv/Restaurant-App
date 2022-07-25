@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cart" representedClassName="Cart" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Transformable"/>
+        <attribute name="price_cart_count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="total_cart_count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CartItems"/>
+    </entity>
+    <entity name="CartItems" representedClassName="CartItems" parentEntity="Cart" syncable="YES" codeGenerationType="class">
+        <attribute name="has_extra" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="in_stock" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="original_price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="product_extras" optional="YES" attributeType="String"/>
+        <attribute name="product_name" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="special_instructions" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Cart" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="CartItems" positionX="-54" positionY="0" width="128" height="179"/>
+    </elements>
+</model>
